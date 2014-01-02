@@ -77,4 +77,8 @@ Piniteresting::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  
+  # Required for heroku
+  # Note to set this
+  config.action_mailer.default_url_options = { :host => 'shr-pininteresting.herokuapp.com' }
 end
